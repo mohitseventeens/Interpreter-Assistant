@@ -1,0 +1,34 @@
+site_name: Interpreter Assistant Documentation
+site_url: https://your-org.github.io/interpreter-assistant
+repo_url: https://github.com/your-org/interpreter-assistant
+site_description: Documentation for the Interpreter Assistant project
+
+# GitHub Pages configuration
+site_dir: site
+remote_branch: gh-pages
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.sections
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - API Reference:
+    - Audio IO: api/audio_io.md
+    - Deepgram: api/deepgram.md
+    - Utils: api/utils.md
+  - Configuration: configuration.md
+  - Development: development.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.arithmatex
