@@ -8,7 +8,13 @@ from typing import Optional, Callable
 class AudioCapture:
     """Handles audio stream capture and processing."""
     
-    def __init__(self, sample_rate: int = 16000, chunk_size: int = 8000):
+    def __init__(self, sample_rate: int = 16000, chunk_size: int = 4000):
+        """Initialize audio capture.
+        
+        Args:
+            sample_rate: Audio sample rate in Hz
+            chunk_size: Number of samples per chunk (0.25 second of audio)
+        """
         self.sample_rate = sample_rate
         self.chunk_size = chunk_size
         self.audio = pyaudio.PyAudio()
