@@ -27,7 +27,9 @@ jobs:
         pip install mkdocs-material mkdocs mkdocs-minify-plugin
         
     - name: Build documentation
-      run: mkdocs build --strict
+      run: |
+        cd docs
+        mkdocs build --strict
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
